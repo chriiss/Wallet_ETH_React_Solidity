@@ -1,6 +1,7 @@
+# Project screenshot
+
+
 ![screen_1_wallet_prtoject](https://user-images.githubusercontent.com/19823154/208690785-7027e7d1-5faf-4bc9-8894-db0dd979cd7b.PNG)
-
-
 
 
 # Sample Hardhat Project
