@@ -1,0 +1,92 @@
+$primary_color: #212121;
+$secondary_color: #f0ecec;
+$third_color: rgb(108, 255, 206);
+
+html, body {
+  background-color: $primary_color;
+  color: $secondary_color;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+@mixin flexStyle($flex, $column, $justify, $align, $space) {
+  display: $flex;
+  flex-direction: $column;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $space;
+}
+
+@mixin borderRadiusStyle($radius: .5rem) {
+  border-radius: $radius;
+}
+
+@mixin logoSize($height, $width) {
+  height: $height;
+  width: $width;
+}
+
+header {
+  div {
+    @include flexStyle(flex, row, center, center, .5rem);
+
+    img {
+      @include logoSize(2rem, 2rem);
+    }
+  }
+}
+
+.wallet_container {
+  @include flexStyle(flex, column, center, center, 2rem);
+
+  &_balance {
+    @include flexStyle(flex, column, center, center, 0rem);
+    height: 20vh;
+
+    .error, .success {
+      padding: .75rem;
+    }
+
+    .error {
+      background-color: rgb(153, 3, 3);
+    }
+    .success {
+      background-color: rgb(1, 101, 11);
+    }
+  }
+
+  div {
+    input {
+      height: 2rem;
+      width: 200px;
+      padding-left: .5rem;
+      outline: none;
+      border: none;
+      @include borderRadiusStyle;
+    }
+    button  {
+      background-color: $third_color;
+      color: $primary_color;
+      cursor: pointer;
+      border: none;
+      @include borderRadiusStyle;
+      padding: .5rem;
+      margin-left: .5rem;
+      width: 5rem;
+      transition: all .75s ease-in-out;
+
+      &:hover {
+        background: none;
+        border: 1px solid $third_color;
+        color: $third_color;
+      }
+    }
+  }
+}

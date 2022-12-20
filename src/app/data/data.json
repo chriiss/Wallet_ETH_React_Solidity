@@ -1,0 +1,19 @@
+{
+    "headerComponent": {
+        "title": "My Wallet"
+    },
+
+    "balanceComponent": {
+        "symbol": "eth"
+    },
+
+    "transfertEthComponent": {
+        "sendEth": "Send ether",
+        "send": "Send"
+    },
+
+    "withdrawEthComponent": {
+        "withdrawEth": "Withdraw ether",
+        "withdraw": "Withdraw"
+    }
+}
