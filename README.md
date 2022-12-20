@@ -8,17 +8,27 @@
 ![screenshot_5](https://user-images.githubusercontent.com/19823154/208690874-b021d1bb-d248-409b-a504-13ccc2047a90.PNG)
 ![screenshort_6](https://user-images.githubusercontent.com/19823154/208690888-1dfe3a97-8a78-4421-8917-dfadb9bf7ae0.PNG)
 
+# Create react project
 
-# Sample Hardhat Project
+npm create vite@latest => to install a react or other project
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+go to the project file
 
-Try running some of the following tasks:
+npm install => to install node module
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+npm run dev => launch the project on localhost 5173
+
+
+# Include solidity in React
+
+npm install ethers hardhat @nomiclabs/hardhat-waffle  @nomiclabs/ethereum-waffle chai  @nomiclabs/hardhat-ethers => to install dependencies and interactions with the front end
+
+npx hardhat => to install smartcontract in the project
+
+npx hardhat compile => to compile the artifacts on the path described in the config note in order for the command to work I must remove the type: "module" in the package.json 
+
+npx hardhat node => will allow us to display the public and private keys of our smartcontract to create fake accounts on metamask to simulate transactions
+
+npx hardhat run scripts/deploy.js --network localhost => to deploy the smartcontract
+
+
